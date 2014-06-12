@@ -1509,7 +1509,6 @@ public with sharing class ToolingAPI {
     }
 
     public class WorkflowRule extends SObject_x implements ISerialize {
-        public String id;
         public String fullName;
         public DateTime lastModifiedDate;
         public WorkflowRuleMetadata metadata;
@@ -1521,8 +1520,6 @@ public with sharing class ToolingAPI {
         }
         public override void serialize(JSONGenerator jsonGen) {
             super.serialize(jsonGen);
-            if(id!=null)
-                jsonGen.writeStringField('id', id);
             if(fullName!=null)
                 jsonGen.writeStringField('fullName', fullName);
             if(lastModifiedDate!=null)
@@ -1548,7 +1545,6 @@ public with sharing class ToolingAPI {
     }
 
     public class WorkflowAlert extends SObject_x implements ISerialize {
-        public String id;
         public String description;
         public DateTime lastModifiedDate;
         public String namespacePrefix;
@@ -1558,9 +1554,6 @@ public with sharing class ToolingAPI {
         }
         public override void serialize(JSONGenerator jsonGen) {
             super.serialize(jsonGen);
-            if(id!=null)
-                jsonGen.writeStringField('id', id);
-            if(lastModifiedDate!=null)
             if(description!=null)
                 jsonGen.writeStringField('description', description);
             if(lastModifiedDate!=null)
@@ -1573,7 +1566,6 @@ public with sharing class ToolingAPI {
     }
 
     public class WorkflowFieldUpdate extends SObject_x implements ISerialize {
-        public String id;
         public DateTime lastModifiedDate;
         public String name;
         public String namespacePrefix;
@@ -1583,9 +1575,6 @@ public with sharing class ToolingAPI {
         }
         public override void serialize(JSONGenerator jsonGen) {
             super.serialize(jsonGen);
-            if(id!=null)
-                jsonGen.writeStringField('id', id);
-            if(lastModifiedDate!=null)
             if(lastModifiedDate!=null)
                 jsonGen.writeDateTimeField('lastModifiedDate', lastModifiedDate);
             if(name!=null)
@@ -1598,7 +1587,6 @@ public with sharing class ToolingAPI {
     }
 
     public class WorkflowOutboundMessage extends SObject_x implements ISerialize {
-        public String id;
         public DateTime lastModifiedDate;
         public String name;
         public String namespacePrefix;
@@ -1608,9 +1596,6 @@ public with sharing class ToolingAPI {
         }
         public override void serialize(JSONGenerator jsonGen) {
             super.serialize(jsonGen);
-            if(id!=null)
-                jsonGen.writeStringField('id', id);
-            if(lastModifiedDate!=null)
             if(lastModifiedDate!=null)
                 jsonGen.writeDateTimeField('lastModifiedDate', lastModifiedDate);
             if(name!=null)
@@ -1623,7 +1608,6 @@ public with sharing class ToolingAPI {
     }
  
     public class WorkflowTask extends SObject_x implements ISerialize {
-        public String id;
         public DateTime lastModifiedDate;
         public String namespacePrefix;
         public String subject;
@@ -1633,8 +1617,6 @@ public with sharing class ToolingAPI {
         }
         public override void serialize(JSONGenerator jsonGen) {
             super.serialize(jsonGen);
-            if(id!=null)
-                jsonGen.writeStringField('id', id);
             if(lastModifiedDate!=null)
                 jsonGen.writeDateTimeField('lastModifiedDate', lastModifiedDate);
             if(namespacePrefix!=null)
